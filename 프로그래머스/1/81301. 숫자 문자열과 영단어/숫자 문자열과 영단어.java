@@ -1,16 +1,9 @@
 class Solution {
     public int solution(String s) {
-        int answer = 0;
-        String[] english_numbers = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-        String[] numbers = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
-       
-        for(int i = 0; i <  english_numbers.length; ++i) {
-            s = s.replaceAll(english_numbers[i], numbers[i]);    
+        String[] strArr = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+        for(int i = 0; i < strArr.length; i++) {
+            s = s.replaceAll(strArr[i], Integer.toString(i));
         }
-        
-        int convert_s = Integer.parseInt(s);
-        answer = convert_s;
-        
-        return answer;
+        return Integer.parseInt(s);
     }
 }
