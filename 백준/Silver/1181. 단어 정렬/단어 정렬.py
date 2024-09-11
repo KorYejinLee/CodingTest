@@ -1,21 +1,21 @@
 import sys
 
-def find_unique_names():
+def find_unique_words():
     input = sys.stdin.read
     data = input().strip().split('\n')
     
     n = int(data[0])
-    names = data[1:]
+    words = data[1:]
     
     # 중복 제거
-    unique_names = list(set(names))
+    unique_words = list(set(words))
     
-    # 이름을 길이 순서로 정렬하고, 길이가 같으면 사전 순으로 정렬
-    sorted_names = sorted(unique_names, key=lambda x: (len(x), x))
+    # 단어를 길이 순서로 정렬하고, 길이가 같으면 사전 순으로 정렬
+    sorted_words = sorted(unique_words, key=lambda x: (len(x), x))
     
     # 결과 출력
-    for name in sorted_names:
-        print(name)
+    for word in sorted_words:
+        print(word)
 
 if __name__ == "__main__":
-    find_unique_names()
+    find_unique_words()
